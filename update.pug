@@ -1,0 +1,34 @@
+html
+body
+  p #{message}
+  h2= 'Customer details'
+  form(method='POST' action='/update-client')
+    input(type='hidden' id='oldname' name='oldname' value=oldname)
+    input(type='hidden' id='oldaddress' name='oldaddress' value=oldaddress)
+    input(type='hidden' id='oldtelephone' name='oldtelephone' value=oldtelephone)
+    input(type='hidden' id='oldnote' name='oldnote' value=oldnote)
+    label(for='name') Customer name:
+    br
+    input(type='text', placeholder='John Smith' name='name' value=name)
+    br
+    label(for='address') Customer address:
+    br
+    input(type='text', placeholder='42 Wallaby Way, Sydney' name='address' value=address)
+    br
+    label(for='telephone') Customer telephone:
+    br
+    input(type='text', placeholder='+275554202' name='telephone' value=telephone)
+    br
+    label(for='note') Customer note:
+    br
+    input(type='text', placeholder='Likes unicorns' name='note' value=note)
+    br
+    button(type='submit') Update
+  
+  form(method='POST' action='/delete-client')
+    input(type='hidden' id='oldname' name='oldname' value=oldname)
+    input(type='hidden' id='oldaddress' name='oldaddress' value=oldaddress)
+    input(type='hidden' id='oldtelephone' name='oldtelephone' value=oldtelephone)
+    input(type='hidden' id='oldnote' name='oldnote' value=oldnote)
+    button(type='submit') Delete
+    

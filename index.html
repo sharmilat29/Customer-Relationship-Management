@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <body>
+
+    <script>
+        // Check if a success message is present in the URL query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const successMessage = urlParams.get('success');
+
+        // If a success message is present, show it in an alert
+        if (successMessage) {
+            alert(successMessage);
+        }
+    </script>
+
     <form action="/create" method="GET">
       <input type="submit" value="Create" />
     </form>
-
     <br />
     <form action = "/get" method = "GET">
       <input type = "submit" value = "Update/Delete" />
